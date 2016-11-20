@@ -1,0 +1,28 @@
+.button-angle-right {
+    position: relative;
+    margin-top: 15px;
+    padding: 10px 25px;
+    background-color: #000;
+    text-transform: uppercase;
+    color: #fff;
+    @include border-radius(3px);
+    i {
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translateY(-50%);
+        font-size: 22px !important;
+        color: #fff;
+        opacity: 0;
+        @include transition-property(all);
+        @include transition-duration(500ms);
+    }
+    &:hover {
+        color: #fff;
+        cursor: pointer;
+        i {
+            right: 10px;
+            opacity: 1;
+        }
+    }
+}

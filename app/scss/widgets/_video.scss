@@ -1,0 +1,22 @@
+.video {
+    position: relative;
+    left: 50%;
+    overflow: hidden;
+    max-width: 560px;
+    height: 315px;
+    margin-bottom: 37px;
+    padding-top: 30px;
+
+    @include transform(translate(-50%));
+
+    iframe, object, embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        float: none;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+}

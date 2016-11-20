@@ -1,0 +1,278 @@
+header {
+	padding-bottom: 100px;
+	background-color: $generalBackgroundColor;
+	text-align: center;
+	a.logo {
+		width: 17%;
+		img {
+			width: 100%;
+			height: auto;
+		}
+		@include breakpoint(extra-small) {
+			width: 50%;
+		}
+	}
+
+	nav.navbar-default {
+		z-index: 2;
+		background-image: none;
+		background-color: transparent;
+		border: none;
+		.navbar-toggle {
+			@include transition-property(all);
+			@include transition-duration(500ms);
+			.icon-bar {
+				background-color: #fff;
+				@include transition-property(all);
+				@include transition-duration(500ms);
+			}
+
+			&.navbar-toggle-arrow {
+				border-color: transparent;
+			}
+
+			.icon-bar-arrow {
+				&:nth-child(2) {
+					transform: translateY(6px) translateX(5px) rotate(60deg);
+				}
+
+				&:nth-child(3) {
+					transform: translateY(0px) translateX(5px) rotate(60deg);
+				}
+
+				&:nth-child(4) {
+					transform: translateY(-6px) translateX(-5px) rotate(120deg);
+				}
+			}
+		}
+
+		.navbar-collapse {
+			border: none;
+		}
+
+		.navbar-header {
+			border: none;
+			background-image: none;
+			background-color: transparent;
+			button {
+				position: relative;
+				float: right;
+				margin-top: 20px;
+				margin-right: 6px;
+				margin-bottom: 6px;
+				margin-left: 6px;
+				padding: 10px;
+				border: 1px solid #fff;
+				border-radius: 5px;
+				background-color: transparent;
+				&:hover, &:focus, &:active {
+					background-color: transparent;
+				}
+			}
+		}
+
+		.navbar-nav {
+			position: relative;
+			left: 50%;
+			transform: translateX(-50%);
+			@include breakpoint(small) {
+				transform: translateX(-60%);
+			}
+			@include breakpoint(horizontal-iPad) {
+				position: static;
+				transform: translateX(0);
+			}
+			.dropdown-button {
+				position: absolute;
+				top: 5px;
+				right: 20px;
+				display: block;
+				width: 15px;
+				height: 15px;
+				transform: translateY(100%);
+				cursor: pointer;
+				span {
+					display: block;
+					width: 15px;
+					height: 1px;
+					margin-top: 6px;
+					background-color: #fff;
+					@include transition-property(all);
+					@include transition-duration(500ms);
+				}
+
+				span:nth-child(1) {
+					position: absolute;
+					transform: translateY(50%) rotate(90deg);
+				}
+				@include breakpoint(horizontal-iPad-up) {
+					display: none;
+				}
+			}
+
+			li {
+				position: relative;
+			}
+
+			a {
+				position: relative;
+				display: inline-block;
+				font-family: $generalfont;
+				font-size: 15px;
+				font-weight: 400;
+				line-height: 35px;
+				text-transform: uppercase;
+				color: #fff;
+				&::after {
+					content: "";
+					position: absolute;
+					top: 100%;
+					left: 50%;
+					transform: translateX(-50%);
+					width: 0;
+					height: 2px;
+					margin-top: -10px;
+					background: radial-gradient(#99f4f9, transparent);
+					@include transition-property(all);
+					@include transition-duration(500ms);
+				}
+
+				&:hover, &:active, &:focus {
+					color: #fff;
+					&::after {
+						width: 100%;
+					}
+				}
+			}
+
+			ul.books-list-dropdown {
+				position: absolute;
+				top: 100%;
+				overflow: hidden;
+				z-index: 1;
+				min-width: 17em;
+				max-width: 20em;
+				max-height: 0;
+				background-color: rgba(59, 58, 58, 0.53);
+				text-align: left;
+				@include transition-property(all);
+				@include transition-duration(500ms);
+				@include breakpoint(horizontal-iPad) {
+					text-align: center;
+				}
+				@include breakpoint(horizontal-iPad) {
+					position: static;
+				}
+				&.menu-expanded{
+					max-height: 700px;
+				}
+
+				li {
+					margin: 0 15px;
+					a {
+						display: inline-block;
+						padding-bottom: 10px;
+						font-size: 12px;
+						line-height: 20px;
+						text-transform: none;
+						&::after {
+							content: "";
+							position: absolute;
+							top: 100%;
+							left: 50%;
+							transform: translateX(-50%);
+							@include transition-property(all);
+							@include transition-duration(500ms);
+							@include breakpoint(horizontal-iPad) {
+								width: 0;
+							}
+						}
+						@include breakpoint(horizontal-iPad) {
+							padding: 10px 5px;
+							font-size: 14px;
+						}
+					}
+					@include breakpoint(horizontal-iPad) {
+						margin: 0;
+						&:hover {
+							background-color: #FD6304;
+							a {
+								color: #000;
+							}
+						}
+					}
+				}
+				@include breakpoint(horizontal-iPad) {
+					max-width: 100%;
+				}
+			}
+			li.active {
+				a {
+					position: relative;
+					display: inline-block;
+					background-image: none;
+					background-color: transparent;
+					font-size: 16px;
+					font-weight: 400;
+					line-height: 35px;
+					text-transform: uppercase;
+					color: #fff;
+					&::after {
+						content: "";
+						position: absolute;
+						top: 100%;
+						left: 50%;
+						transform: translateX(-50%);
+						width: 100%;
+						height: 2px;
+						margin-top: -10px;
+						background: radial-gradient(#99f4f9, transparent);
+					}
+					&:hover, &:active, &:focus {
+						background-color: transparent;
+						color: #fff;
+					}
+				}
+			}
+
+			li:nth-child(2):hover {
+				ul.books-list-dropdown {
+					@include breakpoint(horizontal-iPad-up) {
+						max-height: 500px;
+						padding-top: 5px;
+					}
+				}
+			}
+			@include breakpoint(horizontal-iPad) {
+				float: none;
+				text-align: center;
+			}
+		}
+	}
+
+	.cart {
+		position: absolute;
+		top: 15px;
+		right: 20px;
+		left: auto;
+		z-index: 2;
+		display: table;
+		font-family: $generalfont;
+		font-size: 12px;
+		color: #fff;
+		&:hover {
+			color: #fff;
+		}
+
+		span {
+			text-decoration: underline;
+			&:hover {
+				color: #F99E22;
+			}
+		}
+		@include breakpoint(medium-large) {
+			right: 0;
+			left: 20px;
+		}
+	}
+}

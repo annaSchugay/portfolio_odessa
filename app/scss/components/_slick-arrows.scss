@@ -1,0 +1,95 @@
+.slick-slider, .slick-lightbox {
+	button {
+		&:hover, &:active, &:focus {
+			border: none;
+			background-color: transparent;
+		}
+	}
+	
+	.slick-arrow {
+		z-index: 1;
+		width: 35px;
+		height: 35px;
+		margin: 0;
+		&:before {
+			font-family: FontAwesome;
+			font-size: 32px;
+			color: #afadad;
+			opacity: 1;
+			@include breakpoint(medium-large) {
+				font-size: 20px;
+			}
+		}
+		@include breakpoint(medium-large) {
+			&:before {
+				color: #d4d4d4;
+			}
+		}
+		@include breakpoint(large) {
+			width: 100px;
+			height: 100px;
+		}
+	}
+	
+	.slick-next {
+		left: 100%;
+		transform: translateX(0%) translateY(-50%);
+		&:before {
+			content: "\f054";
+		}
+		@include breakpoint(medium-large) {
+			transform: translateX(-100%) translateY(-50%);
+		}
+	}
+	
+	.slick-prev {
+		left: 0;
+		transform: translateX(-100%) translateY(-50%);
+		&:before {
+			content: "\f053";
+		}
+		
+		@include breakpoint(medium-large) {
+			transform: translateX(0%) translateY(-50%);
+		}
+	}
+}
+
+.slick-lightbox {
+	.slick-arrow {
+		@include breakpoint(extra-small-up) {
+			width: 100px;
+			height: 100px;
+		}
+	}
+	
+	.slick-next {
+		@include breakpoint(large) {
+			transform: translateX(-100%) translateY(-50%);
+		}
+	}
+	
+	.slick-prev {
+		@include breakpoint(large) {
+			transform: translateX(0%) translateY(-50%);
+		}
+	}
+	
+	.slick-lightbox-close {
+		right: 35px;
+		margin: 0;
+		@include breakpoint(large) {
+			right: 75px;
+		}
+		@include breakpoint(mobile-landscape) {
+			top: 0px;
+			right: 15px;
+		}
+		&:before {
+			font-size: 50px;
+			@include breakpoint(large) {
+				font-size: 100px;
+			}
+		}
+	}
+}

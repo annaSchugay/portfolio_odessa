@@ -1,0 +1,35 @@
+.alert-danger {
+  border: none;
+  background-image: none;
+  background-color: red;
+  color: #fff;
+}
+
+.alert-success {
+  width: 80%;
+  margin: 25px auto;
+  border: none;
+  background-image: none;
+  background-color: #fff;
+  color: #000;
+  a {
+    text-decoration: underline;
+    &:hover {
+      color: #000;
+    }
+  }
+}
+
+.alert-danger, .alert-success {
+  position: relative;
+  button {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    transform: translateX(-150%);
+    &:hover {
+      background-color: transparent;
+      border: none;
+    }
+  }
+}

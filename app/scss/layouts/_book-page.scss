@@ -1,0 +1,29 @@
+.book {
+	.book-preview-item {
+		.preview-image {
+			img {
+				max-width: 100%;
+			}
+		}
+
+		.book-description {
+			max-height: 5000px;
+			.book-description-content {
+				overflow: visible;
+				max-height: 5000px;
+			}
+		}
+
+		.buttons-for-book-item {
+			position: static;
+			transform: translateY(0);
+			button:not(.checkout-button) {
+				display: none;
+			}
+
+			.checkout-button {
+				float: none;
+			}
+		}
+	}
+}

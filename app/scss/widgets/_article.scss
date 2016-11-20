@@ -1,0 +1,25 @@
+article {
+    @extend .clear-fix;
+    padding-top: 45px;
+    padding-bottom: 20px;
+    text-align: center;
+    img {
+        float: left;
+        margin-right: 25px;
+        border-radius: 5px;
+        @include box-shadow(0px 0px 13px 0px rgba(66, 66, 66, 1));
+        @include breakpoint(extra-small) {
+            float: none;
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+    }
+
+    a:hover {
+        color: #000;
+    }
+
+    .organisation {
+        font-weight: 700;
+    }
+}

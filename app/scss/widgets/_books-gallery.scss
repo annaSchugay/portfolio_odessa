@@ -1,0 +1,35 @@
+.books-gallery {
+    .books-slider {
+        margin-top: -78px;
+
+        li {
+            position: relative;
+            border: 8px solid transparent;
+            outline: none;
+            text-align: center;
+            &::after {
+                content: "";
+                position: absolute;
+                left: 50%;
+                z-index: -1;
+                display: inline-block;
+                width: 104px;
+                height: 8px;
+                @include background-image(radial-gradient(center, ellipse cover, #000000 29%, transparent 69%));
+                @include border-radius(10px);
+                @include transform(translateX(-50%) translateY(-5px));
+            }
+
+            a {
+                display: block;
+                outline: none;
+                text-align: center;
+                img {
+                    display: inline-block;
+                    max-width: 100%;
+                    border: 3px solid #fff;
+                }
+            }
+        }
+    }
+}

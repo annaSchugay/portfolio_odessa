@@ -1,0 +1,129 @@
+#accordion {
+	.panel {
+		.panel-heading {
+			h4.panel-title {
+				a {
+				}
+			}
+		}
+		
+		.panel-collapse {
+			.panel-body {
+				p {
+				}
+				
+				.form-horizontal {
+					.form-group {
+						.control-label {
+						}
+						
+						div {
+							input.form-control {
+								&:focus, &:hover {
+									box-shadow: none;
+									border: 1px solid #000;
+								}
+							}
+							
+							select.form-control {
+								box-shadow: none;
+								border: 1px solid #000;
+								&:focus, &:hover {
+									box-shadow: none;
+									border: 1px solid #000;
+								}
+								option {
+									&:focus, &:hover {
+										box-shadow: none;
+										border: 1px solid #000;
+									}
+								}
+							}
+						}
+						
+						.btn {
+						}
+					}
+				}
+				
+				.control-label {
+				}
+				
+				.input-group {
+					input.form-control {
+						z-index: 0;
+						&:focus, &:hover {
+							box-shadow: none;
+							border: 1px solid #000;
+						}
+					}
+					
+					span.input-group-btn {
+						input.btn {
+							@include breakpoint(extra-small) {
+								margin-top: 20px;
+							}
+						}
+					}
+					@include breakpoint(extra-small) {
+						display: block;
+					}
+				}
+			}
+		}
+		
+		.pull-right {
+			float: none !important;
+			width: 100%;
+			input[type="button"] {
+				float: right;
+				@include breakpoint(extra-small) {
+					float: left;
+					margin-top: 15px;
+				}
+			}
+		}
+		table {
+			//display: block;
+			//width: 100%;
+			thead {
+				td {
+					overflow: hidden;
+					float: left;
+					display: block;
+					width: 20%;
+					font-size: 10px;
+					text-overflow: ellipsis;
+				}
+			}
+			
+			tbody {
+				td {
+					float: left;
+					display: block;
+					width: 20%;
+					a {
+						overflow: hidden;
+						text-overflow: ellipsis;
+						display: block;
+						width: 100%;
+					}
+				}
+			}
+			
+			tfoot {
+				display: block;
+				width: 100%;
+				tr {
+					display: block;
+					width: 100%;
+					td {
+						float: left;
+						display: block;
+						width: 50%;
+					}
+				}
+			}
+		}
+	}
+}

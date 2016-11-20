@@ -1,0 +1,136 @@
+@media (min-width: 1200px) {
+	.container {
+		width: 1007px;
+	}
+}
+
+@media (max-width: 1199px) {
+	header .header_icons ul li {
+		float: left; 
+	}
+	header .header_icons ul li:nth-child(1) {
+		margin-right: 15%;
+	}
+	header .header_icons ul li:nth-child(2) {
+		margin-right: 15%; 
+	}
+	header .header_icons ul li:nth-child(3) {
+		margin-right: 15%;
+	}
+	header .header_icons ul li:nth-child(4) {
+		margin-right: 15%; 
+	} 
+
+	main .slide .owl-item .item {
+    text-align: center;
+	}
+}
+
+@media (max-width: 991px) {
+	header .header .header_bottom {
+		text-align: center;
+	}
+	header .header .header_bottom img {
+		width: 50%;
+	}
+}
+
+@media (max-width: 987px) {
+	header .header_icons ul li {
+		float: left; 
+	}
+	header .header_icons ul li:nth-child(1) {
+		margin-right: 12%;
+	}
+	header .header_icons ul li:nth-child(2) {
+		margin-right: 12%; 
+	}
+	header .header_icons ul li:nth-child(3) {
+		margin-right: 12%;
+	}
+	header .header_icons ul li:nth-child(4) {
+		margin-right: 12%; 
+	}
+
+}
+
+@media (max-width: 865px) {
+	main .slide .owl-controls	.owl-prev {
+		left: -15px;
+	}
+	main .slide .owl-controls .owl-next {
+    right: -14px;
+  }
+}
+
+@media (max-width: 740px) {
+	header .header_icons ul li {
+		float: left; 
+	}
+	header .header_icons ul li:nth-child(1) {
+		margin-right: 2px;
+	}
+	header .header_icons ul li:nth-child(2) {
+		margin-right: 2px; 
+	}
+	header .header_icons ul li:nth-child(3) {
+		margin-right: 2px;
+	}
+	header .header_icons ul li:nth-child(4) {
+		margin-right: 2px; 
+	}
+
+	footer ul {
+		justify-content: space-around;
+		/*-webkit-justify-content: space-around;*/
+	}
+
+	footer p {
+		text-align: center;
+	}
+
+}
+
+@media (max-width: 395px) {
+
+	header .header_icons ul {
+		display: none;
+}
+
+@media (max-width: 395px) {
+
+	header .header_icons ul {
+		display: none;
+	}
+
+}
+
+@media (max-width: 370px) {
+
+	header .header .top_header ul li {
+		margin-right: 2px;
+	}
+
+	header .header .header_bottom h1 {
+		font-size: 20pt;
+	}
+
+}
+
+@media (max-width: 336px) {
+
+	aside .blog .blog_block h3 {
+		font-size: 11pt;
+	}
+
+}
+
+@media (max-width: 298px) {
+
+header .header .top_header ul.nav li a {
+		font-size: 9pt;
+		margin-right: 0;
+
+	}
+
+}

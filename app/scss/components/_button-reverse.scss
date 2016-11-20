@@ -1,0 +1,16 @@
+a.button-reverse, button.button-reverse {
+    position: relative;
+    margin-top: 15px;
+    padding: 9px 25px;
+    border: 1px solid #000;
+    background-color: transparent;
+    text-transform: uppercase;
+    color: #000;
+    @include border-radius(3px);
+    &:hover, &:active, &:active:focus {
+        border: 1px solid #000;
+        background-color: #000;
+        color: #fff;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,10 @@
+.idea/
+/system/storage/cache/
+~/.sass-cache/
+/.sass-cache/
+/static/.sass-cache/
+/app/config.php
+/admin/config.php
+.htaccess
+/system/storage/logs/error.log
+/docs/

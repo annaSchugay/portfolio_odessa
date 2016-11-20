@@ -1,0 +1,146 @@
+.book-preview-item {
+	position: relative;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	padding-top: 15px;
+	padding-right: 15px;
+	padding-bottom: 10px;
+	padding-left: 15px;
+	border-radius: 5px;
+	background-color: #f5f5f5;
+	.preview-image {
+		min-height: 250px;
+		text-align: left;
+		a {
+			display: block;
+			img {
+				width: 100%;
+				height: auto;
+				box-shadow: 0 0 5px #000;
+				@include breakpoint(medium-large) {
+					width: 100%;
+				}
+				@include breakpoint(small) {
+					width: 30%;
+				}
+				@include breakpoint(extra-small) {
+					width: 50%;
+				}
+				@include breakpoint(extra-small-mobile) {
+					width: 50%;
+				}
+				@include breakpoint(small-tablet-portrait) {
+					width: 60%;
+				}
+			}
+		}
+		@include breakpoint(extra-small) {
+			max-height: auto;
+			text-align: center;
+		}
+	}
+	
+	.book-description {
+		max-height: 115px;
+		.book-description-content {
+			overflow: hidden;
+			max-height: 115px;
+			margin-bottom: 45px;
+			font-family: $generalfont !important;
+			font-size: 15px;
+			line-height: 24px;
+			text-align: justify;
+			text-overflow: ellipsis;
+			color: $fontColor;
+			@include breakpoint(extra-small) {
+				max-height: 110px;
+				margin-bottom: 50px;
+			}
+			
+			p {
+				margin-top: 0;
+				font-family: $generalfont !important;
+				&:first-child {
+					margin-top: 15px;
+				}
+				@include breakpoint(extra-small) {
+					margin-top: 15px;
+				}
+			}
+		}
+		@include breakpoint(extra-small) {
+			min-height: 100px;
+		}
+	}
+	
+	.buttons-for-book-item {
+		@include breakpoint(small-medium) {
+			position: absolute;
+			top: 100%;
+			transform: translateY(-118%);
+		}
+		.read-more {
+			float: left;
+			margin-top: 15px;
+			font-weight: normal;
+		}
+		
+		.checkout-button {
+			float: right;
+			&:hover {
+				color: #fff;
+			}
+		}
+		
+		ul {
+			li {
+				margin-bottom: 10px;
+				.checkout-button {
+					float: none;
+				}
+				
+				a {
+					img {
+						width: 50%;
+					}
+				}
+			}
+			
+			li:not(:first-child) {
+				overflow: hidden;
+				min-height: 0;
+			}
+			
+			li:first-child {
+				&:hover {
+					li {
+						min-height: 100px;
+						overflow: visible;
+					}
+				}
+			}
+		}
+	}
+	
+	span.price {
+		position: absolute;
+		top: 0;
+		left: 100%;
+		transform: translateX(-115%);
+		display: block;
+		width: 100%;
+		margin-top: 15px;
+		margin-bottom: 25px;
+		font-size: 19px;
+		font-weight: bold;
+		text-align: right;
+		color: #000;
+		@include breakpoint(extra-small) {
+			font-size: 17px;
+		}
+		@include breakpoint(mobile) {
+			font-size: 14px;
+		}
+	}
+}
+

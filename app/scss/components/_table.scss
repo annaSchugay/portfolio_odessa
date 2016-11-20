@@ -1,0 +1,34 @@
+table {
+  td {
+    border: 1px solid #ececec;
+    @include breakpoint(extra-small) {
+      overflow: hidden;
+      font-size: 10px;
+      text-overflow: ellipsis;
+      & > a {
+        display: block;
+        font-size: 10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+
+  thead {
+    tr {
+      background-color: #d2d2d2;
+      td {
+        font-weight: bold;
+        color: #000;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      &:nth-child(even) {
+        background-color: #d2d2d2;
+      }
+    }
+  }
+}

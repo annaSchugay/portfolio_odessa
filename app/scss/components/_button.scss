@@ -1,0 +1,35 @@
+a, button, input {
+  display: inline-block;
+  text-decoration: none;
+  @include transition-property(all);
+  @include transition-duration(500ms);
+  &:hover, &:focus, &:active {
+    text-decoration: none;
+    outline: none;
+    border: none;
+  }
+  @include breakpoint(mobile-landscape) {
+    font-size: 12px;
+  }
+}
+
+button, a.button, input[type="button"], .btn {
+  position: relative;
+  border: 1px solid #000;
+  padding: 9px 25px;
+  background-image: none;
+  background-color: transparent;
+  text-transform: uppercase;
+  color: #000;
+  @include border-radius(3px);
+  @include transition-property(all);
+  @include transition-duration(500ms);
+  &:hover, &:active, &:active:focus, &:focus {
+    border: 1px solid #000;
+    background-image: none;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+  }
+}
+

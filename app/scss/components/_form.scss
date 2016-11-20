@@ -1,0 +1,152 @@
+form {
+	max-width: 300px;
+	margin: 25px auto;
+	padding: 15px 25px;
+	border: 1px solid #b5b5b5;
+	text-align: center;
+	@include border-radius(3px);
+	input, input[type='text'], input[type='name'], input[type='number'], input[type='email'], input[type='tel'], input[type='reset'], select, textarea, select, select.form-control, textarea.form-control {
+		display: inline-block;
+		height: auto;
+		box-sizing: border-box;
+		padding-top: 3px;
+		padding-right: 5px;
+		padding-bottom: 6px;
+		padding-left: 5px;
+		border: 1px solid #b5b5b5;
+		background-color: transparent;
+		font-size: 12px;
+		color: #000;
+		@include border-radius(3px);
+		@include transition-property(all);
+		@include transition-duration(0.3ms);
+	}
+	
+	input.email, .mc-field-group input {
+		padding-top: 3px !important;
+		padding-right: 5px !important;
+		padding-bottom: 6px !important;
+		padding-left: 5px !important;
+	}
+	
+	textarea.form-control {
+		min-height: 100px;
+	}
+	
+	.form-control:focus {
+		border-color: #000;
+		outline: 0;
+		background-color: #e6e6e6;
+		box-shadow: none;
+	}
+	
+	label {
+		display: block;
+		margin-bottom: 5px;
+		font-family: $generalfont;
+		font-size: 13px;
+		text-align: left;
+		color: #3f4b56;
+	}
+	
+	.form-group, .mc-field-group {
+		overflow: hidden;
+		.error {
+			float: left;
+			margin: 0;
+			padding-left: 10px;
+			border-left: 1px solid red;
+			color: red;
+			@include transition-property(all);
+			@include transition-duration(0.3ms);
+		}
+		
+		input.error, textarea.error {
+			border: 1px solid red;
+		}
+		
+		label.error {
+			position: absolute;
+			margin-top: 30px;
+			padding: 5px 10px;
+			background-color: transparent;
+		}
+		
+		textarea.error + label.error {
+			margin-top: 100px;
+		}
+	}
+}
+
+.form-control {
+	box-shadow: none;
+	border-color: #bdbdbd;
+	&:hover, &:focus {
+		box-shadow: none;
+		border: 1px solid #000;
+	}
+}
+
+input {
+	@include transition-property(all);
+	@include transition-duration(500ms);
+}
+
+label {
+	margin-bottom: 10px;
+}
+
+.has-error {
+	.help-block, .control-label, .radio, .checkbox, .radio-inline, .checkbox-inline {
+		color: red;
+	}
+	
+	.form-control {
+		border: 1px solid red;
+		&:focus {
+			box-shadow: none;
+			border-color: red;
+		}
+	}
+}
+
+.form-group {
+	margin-bottom: 25px;
+	a {
+		float: right;
+		margin-top: 25px;
+		padding: 5px;
+		border: 1px solid transparent;
+		@include border-radius(3px);
+		text-align: right;
+		&:hover, &:active, &:focus {
+			border-color: #000;
+			color: #000;
+		}
+		&:focus {
+			background-color: #000;
+			color: #fff;
+		}
+	}
+}
+
+//mailchimp form
+
+#mc_embed_signup {
+	.mc-field-group {
+		height: 80px;
+	}
+	
+	#mc-embedded-subscribe-form {
+		input.mce_inline_error {
+			border: 1px solid #e85c41 !important;
+		}
+		
+		div.mce_inline_error {
+			position: absolute;
+			border-left: 1px solid #e85c41;
+			@include border-radius(0px !important);
+			background-color: transparent !important;
+		}
+	}
+}
